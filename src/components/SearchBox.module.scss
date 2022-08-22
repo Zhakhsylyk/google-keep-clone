@@ -1,0 +1,59 @@
+@import "../assets/styles/abstracts/variables";
+
+.header {
+  background-color: $white;
+  color: $shuttle-gray;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-bottom: 1px solid;
+  padding: 8px;
+  flex-direction: row;
+
+  &__menu {
+    padding: 12px;
+  }
+  &__logo {
+    padding: 0 4px 0 0;
+  }
+  &__title {
+    padding: 0 0 0 4px;
+    font-family: Arial, sans-serif;
+  }
+  &__search-bar {
+    height: 48px;
+    width: 38%;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 0 0 0 100px;
+  }
+
+   .panel {
+    margin-left: auto;
+    display: flex;
+    gap: 2px;
+    &__reload {
+      background-image: url("../assets/images/reload.svg");
+      background-repeat: no-repeat;
+
+      opacity: 0.54;
+      width: 48px;
+      height: 48px;
+    }
+    &__grid {
+      background-image: url("../assets/images/grid.svg");
+      background-repeat: no-repeat;
+      opacity: 0.54;
+      width: 48px;
+      height: 48px;
+    }
+    &__settings {
+      background-image: url("../assets/images/settings.svg");
+      background-repeat: no-repeat;
+
+      opacity: 0.54;
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
