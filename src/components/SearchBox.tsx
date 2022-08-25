@@ -4,8 +4,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import SearchIcon from '@mui/icons-material/Search';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import SearchIcon from "@mui/icons-material/Search";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
+const bentoDots = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const SearchBox = () => {
   return (
@@ -22,22 +24,25 @@ const SearchBox = () => {
         />
       </Box>
       <Box className={styles["header__title"]}>
-        <Typography variant="h6">
-          Keep
-        </Typography>
+        <Typography sx={{ fontSize: 22 }}>Keep</Typography>
       </Box>
       <Box className={styles["header__search-bar"]}>
         <SearchIcon />
         <InputBase placeholder="Поиск" />
       </Box>
-      <Box className={styles['panel']}>
-        <Box className={styles['panel__reload']} />
-        <Box className={styles['panel__grid']} />
-        <Box className={styles['panel__settings']} />
+      <Box className={styles["header__panel"]}>
+        <Box className={styles["header__panel-reload"]} />
+        <Box className={styles["header__panel-grid"]} />
+        <Box className={styles["header__panel-settings"]} />
       </Box>
       <Box>
-        <Box className="info">
-            <AccountCircleIcon />
+        <Box className={styles["header__personal"]}>
+          <Box className={styles["bento-menu"]}>
+            {bentoDots.map((item) => (
+              <Box className={styles["bento-dot"]} key={item}></Box>
+            ))}
+          </Box>
+          <AccountCircleIcon fontSize="large" />
         </Box>
       </Box>
     </Box>

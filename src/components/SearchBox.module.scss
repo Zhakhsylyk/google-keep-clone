@@ -1,4 +1,5 @@
 @import "../assets/styles/abstracts/variables";
+@import "../assets/styles/abstracts/_mixins.scss";
 
 .header {
   background-color: $white;
@@ -6,12 +7,19 @@
   display: flex;
   position: relative;
   align-items: center;
-  border-bottom: 1px solid;
-  padding: 8px;
+  border: solid transparent;
+  border-bottom: 1px solid #dcdcdc;
   flex-direction: row;
+  padding: 6px;
 
   &__menu {
     padding: 12px;
+    height: 24px;
+    width: 24px;
+
+    &:hover {
+      @include hvr;
+    }
   }
   &__logo {
     padding: 0 4px 0 0;
@@ -21,39 +29,87 @@
     font-family: Arial, sans-serif;
   }
   &__search-bar {
-    height: 48px;
-    width: 38%;
+    height: 46px;
+    width: 700px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid transparent;
+    color: fieldtext;
     margin: 0 0 0 100px;
+    background-color: $porcelain;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    gap: 15px;
   }
-
-   .panel {
+  &__panel {
     margin-left: auto;
     display: flex;
-    gap: 2px;
-    &__reload {
+    align-items: center;
+    gap: 25px;
+    margin-right: 60px;
+    &-reload {
       background-image: url("../assets/images/reload.svg");
       background-repeat: no-repeat;
+      background-size: cover;
 
       opacity: 0.54;
-      width: 48px;
-      height: 48px;
+      width: 24px;
+      height: 24px;
+
+      &:hover {
+        @include hvr;
+      }
     }
-    &__grid {
+    &-grid {
       background-image: url("../assets/images/grid.svg");
       background-repeat: no-repeat;
-      opacity: 0.54;
-      width: 48px;
-      height: 48px;
-    }
-    &__settings {
-      background-image: url("../assets/images/settings.svg");
-      background-repeat: no-repeat;
+      background-size: cover;
 
       opacity: 0.54;
-      width: 48px;
-      height: 48px;
+      width: 24px;
+      height: 24px;
+      &:hover {
+        @include hvr;
+      }
+    }
+    &-settings {
+      background-image: url("../assets/images/settings.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.54;
+      width: 24px;
+      height: 24px;
+      &:hover {
+        @include hvr;
+      }
     }
   }
+  &__personal {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-right: 10px;
+  }
+}
+
+.bento-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+  height: 18px;
+  width: 18px;
+
+  &:hover {
+    @include hvr;
+  }
+}
+
+.bento-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: $shuttle-gray;
 }
