@@ -8,24 +8,19 @@ $archieve: url("../assets/images/archieve-icon.svg") center no-repeat;
 $basket: url("../assets/images/basket-icon.svg") center no-repeat;
 
 .sidebar {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 75px);
   background-color: transparent;
   display: flex;
   flex-direction: column;
   padding-left: 12px;
   padding-top: 8px;
+  /* box-shadow: 10px 0 20px -20px #333;
+  width: 280px; */
+  align-items: flex-start !important;
 
-  &:hover {
-    width: 280px;
-    align-items: flex-start !important;
-    transition: width box-shadow 0.1s;
-    box-shadow: 10px 0 20px -20px #333;
-    transition-delay: 0.5s;
-  }
-  &:not(:hover) {
-    width: 72px;
-    transition: width 0.1s;
-    transition-delay: 0.1s;
+  &__section {
+    height: 48px;
+    width: 48px;
   }
 
   &__note {

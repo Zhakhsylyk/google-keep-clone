@@ -1,0 +1,14 @@
+@import "../assets/styles/abstracts/_variables.scss";
+
+.section-info {
+  color: $oslo-gray;
+
+  &_logo {
+    background: url("../assets/images/notes-icon-info.svg") center no-repeat;
+    background-size: 120px;
+    height: 120px;
+    margin: 20px;
+  }
+  &_title {
+  }
+}

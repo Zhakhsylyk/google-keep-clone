@@ -1,0 +1,80 @@
+@import "../assets/styles/abstracts/variables";
+@import "../assets/styles/abstracts/_mixins.scss";
+
+* {
+  font-family: Roboto, Arial, sans-serif;
+}
+.workspace {
+  position: absolute;
+  left: 510px;
+  top: 95px;
+  border: solid transparent;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  width: 586px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.56);
+
+  &__input {
+    color: $shark;
+    letter-spacing: 0.01428571em;
+    font-size: 0.875rem;
+    font-weight: 400;
+    width: 400px;
+  }
+  &__options {
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+
+    &_item {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        @include hvr;
+      }
+      &_list-add {
+        background-image: url("../assets/images/list-add.svg");
+        background-size: cover;
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &_pic-add {
+      background-image: url("../assets/images/pic-add.svg");
+      background-size: cover;
+      height: 24px;
+      width: 24px;
+      cursor: pointer;
+      &:hover {
+        @include hvr;
+      }
+    }
+    &_img-add {
+      background-image: url("../assets/images/img-add.svg");
+      background-size: cover;
+      height: 24px;
+      width: 24px;
+      cursor: pointer;
+      &:hover {
+        @include hvr;
+      }
+    }
+  }
+
+  &__section-info {
+    position: absolute;
+    top: 190px;
+  }
+}
+.note-card {
+  background: red;
+}

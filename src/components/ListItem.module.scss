@@ -1,0 +1,18 @@
+* {
+}
+
+.list_item {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: red;
+}
+
+.card p {
+  padding-top: 1rem;
+  line-height: 150%;
+}
