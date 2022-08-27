@@ -1,14 +1,27 @@
 @import "../assets/styles/abstracts/_variables.scss";
+@import "../assets/styles/abstracts/_mixins.scss";
 
 .section-info {
   color: $oslo-gray;
 
-  &_logo {
-    background: url("../assets/images/notes-icon-info.svg") center no-repeat;
-    background-size: 120px;
-    height: 120px;
-    margin: 20px;
+  &_logo-note {
+    background: $note-info;
+    @include logo;
   }
-  &_title {
+  &_logo-reminder {
+    background: $reminder-info;
+    @include logo;
+  }
+  &_logo-label {
+    background: $label-info;
+    @include logo;
+  }
+  &_logo-archieve {
+    background: $archieve-info;
+    @include logo;
+  }
+  &_logo-basket {
+    background: $basket-info;
+    @include logo;
   }
 }

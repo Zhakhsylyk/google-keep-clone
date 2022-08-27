@@ -41,6 +41,21 @@
     padding-left: 15px;
     gap: 15px;
   }
+  &__search-bar_on {
+    height: 46px;
+    width: 700px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    color: fieldtext;
+    margin: 0 0 0 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    gap: 15px;
+    box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.56);
+    transition: box-shadow 0.1s;
+  }
   &__panel {
     margin-left: auto;
     display: flex;

@@ -3,20 +3,43 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import styles from "./SectionInfo.module.scss";
 
-const SectionInfo: React.FC<{ section: string }> = ({ section }) => {
+interface Info {
+  paragraph: string | null;
+  sectionSelector: string | null;
+  section: string;
+}
+const SectionInfo: React.FC<Info> = ({
+  section,
+  paragraph,
+  sectionSelector,
+}: Info) => {
   switch (section) {
     case "note":
-      return <Box>Note</Box>;
+      paragraph = "Здесь будут ваши заметки";
+      sectionSelector = "note";
+      break;
+    case "reminder":
+      paragraph = "Здесь будут заметки с напоминаниями.";
+      sectionSelector = "reminder";
+      break;
+    case "label":
+      paragraph = "Нет заметок с этим ярлыком";
+      sectionSelector = "label";
+      break;
     case "basket":
-      return <Box>Basket</Box>;
+      paragraph = "В корзине ничего нет.";
+      sectionSelector = "basket";
+      break;
     case "archieve":
-      return <Box>Archieve</Box>;
+      paragraph = "Здесь будут храниться архивированные заметки.";
+      sectionSelector = "archieve";
+      break;
   }
   return (
     <Box className={styles["section-info"]}>
-      <Box className={styles["section-info_logo"]}></Box>
+      <Box className={styles[`section-info_logo-${sectionSelector}`]}></Box>
       <Typography className={styles["section-info_title"]} variant="h6">
-        Здесь будут ваши заметки. {section}
+        {paragraph}
       </Typography>
     </Box>
   );

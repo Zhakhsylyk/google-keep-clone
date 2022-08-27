@@ -7,10 +7,16 @@ import InputBase from "@mui/material/InputBase";
 import Tooltip from "@mui/material/Tooltip";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import useOutside from "../hooks/useOutside";
 
 const bentoDots = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const SearchBox = () => {
+  const [ref, isFocus, setIsFocus] = useOutside(false);
+  const onSearchHandler = () => {
+    setIsFocus(true);
+  };
+
   return (
     <Box className={styles.header}>
       <Tooltip title="Главное меню">
@@ -29,9 +35,15 @@ const SearchBox = () => {
       <Box className={styles["header__title"]}>
         <Typography sx={{ fontSize: 22 }}>Keep</Typography>
       </Box>
-      <Box className={styles["header__search-bar"]}>
+      <Box
+        className={`${
+          isFocus
+            ? styles["header__search-bar_on"]
+            : styles["header__search-bar"]
+        }`}
+      >
         <SearchIcon />
-        <InputBase placeholder="Поиск" />
+        <InputBase placeholder="Поиск" onClick={onSearchHandler} ref={ref} />
       </Box>
       <Box className={styles["header__panel"]}>
         <Tooltip title="Обновить">

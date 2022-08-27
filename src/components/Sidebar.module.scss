@@ -1,12 +1,6 @@
 @import "../assets/styles/abstracts/variables";
 @import "../assets/styles/abstracts/_mixins.scss";
 
-$note: url("../assets/images/notes-icon.svg") center no-repeat;
-$reminder: url("../assets/images/reminder-icon.svg") center no-repeat;
-$label: url("../assets/images/label-changes-icon.svg") center no-repeat;
-$archieve: url("../assets/images/archieve-icon.svg") center no-repeat;
-$basket: url("../assets/images/basket-icon.svg") center no-repeat;
-
 .sidebar {
   height: calc(100vh - 75px);
   background-color: transparent;

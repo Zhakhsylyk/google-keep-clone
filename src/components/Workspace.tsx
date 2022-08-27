@@ -37,7 +37,7 @@ const Workspace = () => {
         </Box>
       </Box>
       <Box className={styles["workspace__section-info"]}>
-        <SectionInfo section={"note"} />
+        <SectionInfo section={"note"} paragraph={null} sectionSelector={null} />
       </Box>
     </Box>
   );
